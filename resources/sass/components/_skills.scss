@@ -1,0 +1,74 @@
+.skills-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    color: #000000;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // 3 items per row
+    gap: 1.5rem;
+
+    .skill-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      background: #f8f8f8;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
+
+      i {
+        font-size: 3.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      span {
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+
+      // Brand colors (same as before)
+      &.skill-php i { color: #777BB3; }
+      &.skill-js i { color: #F7DF1E; }
+      &.skill-sass i { color: #CD6799; }
+      &.skill-mysql i { color: #00758F; }
+      &.skill-git i { color: #F05032; }
+      &.skill-bootstrap i { color: #6610f2; }
+      &.skill-laravel i { color: #FF2D20; }
+      &.skill-docker i { color: #2496ED; }
+      &.skill-cakephp i { color: #D33C43; }
+      &.skill-python i { color: #3776AB; }
+      &.skill-html i { color: #E34F26; }
+      &.skill-css i { color: #264DE4; }
+      &.skill-docker i { color: #2496ED; }
+
+      // ... (other colors)
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr) !important; // 2 items per row on mobile
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: 1fr !important; // 1 item per row on small screens
+  }
+}
